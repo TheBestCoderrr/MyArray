@@ -19,9 +19,9 @@ public:
 	size_t GetSize();
 
 	void Init();
-	void Show();
-	void SetSize();
-	void Sort();
-	void PrintMinMax();
+	void Show() const;
+	void SetSize(size_t size);
+	void Sort() const;
+	void PrintMinMax() const;
 };
 
