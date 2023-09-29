@@ -20,8 +20,8 @@ public:
 
 	void Init();
 	void Show() const;
-	void SetSize(size_t size);
-	void Sort() const;
+	void SetSizeArr(size_t size);
+	void Sort(bool a) const;
 	void PrintMinMax() const;
 };
 

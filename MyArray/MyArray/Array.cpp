@@ -62,7 +62,7 @@ void Array::Show() const{
 	cout << endl;
 }
 
-void Array::SetSize(size_t size) {
+void Array::SetSizeArr(size_t size) {
 	int* temp = new int[size];
 	if (this->size >= size) {
 		for (int i = 0; i < size; i++)
@@ -83,27 +83,13 @@ void Array::SetSize(size_t size) {
 	delete[] temp;
 }
 
-void Array::Sort() const {
+void Array::Sort(bool a) const {
 	int temp, j;
 	for (int i = 0; i < size; i++) {
 		temp = arr[i];
-		for (j = i - 1; j >= 0 && arr[i] > temp; j--)
+		for (j = i - 1; j >= 0 && ((a == 1) ? arr[j] > temp: arr[j] < temp); j--)
 			arr[j + 1] = arr[j];
 		arr[j + 1] = temp;
-	}
-}
-
-void SortVstavka(int* p, int size)
-{
-	int x, j;
-	for (int i = 0; i < size; i++)
-	{
-		x = p[i];
-		for (j = i - 1; j >= 0 && p[j] > x; j--)
-		{
-			p[j + 1] = p[j];
-		}
-		p[j + 1] = x;
 	}
 }
 
